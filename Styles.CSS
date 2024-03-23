@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+body {
+    background: rgb(212, 0, 0);
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style:normal;
+    user-select: none;
+    
+}
+header {
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+}
+header a {
+    text-decoration: none;
+}
+.logo {
+    display: flex;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.logo__h2 {
+    text-decoration: none;
+    color: black;
+    font-size: 39px;
+}
+.logo img {
+    width: 45px;
+}
+.contenedor-imagenes {
+   /** margin: 120px auto;**/
+    margin-top: 120px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 50px;
+    align-items: center;
+    gap: 30px;
+}
+.imagenes img {
+    width: 190px;
+    border-radius: .2cm;
+    transition: .2s;
+}
+.imagenes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.nombre {
+    background-color: rgba(0, 0, 0, 0);
+    text-align: center;
+    padding: 4px 7px;
+    color: rgba(255, 255, 255, 0);
+    width: 110px;
+    height: 30px;
+    border-radius: .2cm;
+    position: relative;
+    margin-top: 20px;
+}
+.nombre::before {
+    content: "";
+    position: absolute;
+    bottom: -7px;
+    border-top: solid 15px black;
+    border-right: solid 15px transparent;
+    display: none;
+    border-left: solid 15px transparent;
+
+}
+.imagenes:hover .nombre {
+    top: -340px;
+    color: white;
+    background-color: black;
+
+}
+.imagenes:hover img {
+    transform: rotate(-4deg);
+}
+.imagenes:hover .nombre::before {
+    display: inline-flex;
+}
+.TITULO {
+    position: absolute;
+    color: black;
+    font-size: 85px;
+
+}
+.titulos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto ;
+    position: relative;
+    top: 60px;
+
+}
+@media (max-width:700px) {
+    .contenedor-imagenes {
+        flex-direction: column;
+        margin: 120px auto;
+    }
+    .TITULO {
+        font-size: 55PX;
+        margin-bottom: 20px;
+        
+    }
+    .imagenes img {
+        width: 240px;
+    }
+    .imagenes:hover .nombre {
+        top: -400px;
+    }
+   
+    
+}
